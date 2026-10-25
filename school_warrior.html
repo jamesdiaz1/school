@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="theme-color" content="#100b16">
+<title>SCHOOL WARRIOR | Frayjabaverso</title>
+<style>
+:root{--bg:#09070d;--panel:#17121f;--panel2:#211827;--red:#d82b43;--red2:#ff5266;--violet:#6f3b91;--text:#f6f0f7;--muted:#c4b7c9;--gold:#f3c969;--green:#66d7a0}
+*{box-sizing:border-box}html{background:var(--bg);scroll-behavior:smooth}body{margin:0;min-height:100vh;color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:radial-gradient(ellipse at 78% 5%,#411528 0,transparent 30%),radial-gradient(ellipse at 12% 60%,#241137 0,transparent 35%),linear-gradient(145deg,#08070b,#100b16 65%,#160b12);overflow-x:hidden}button,input,select{font:inherit}button{min-height:46px;border:1px solid #704057;border-radius:12px;background:#291725;color:var(--text);padding:11px 16px;font-weight:750;cursor:pointer;transition:transform .15s,border-color .15s,background .15s;touch-action:manipulation}button:hover{border-color:var(--red2);background:#3a1b2c}button:active{transform:scale(.98)}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-offset:2px}button.primary{background:linear-gradient(120deg,#b81f3b,#702c82);border-color:#f35a70;box-shadow:0 8px 24px #b91e3b33}button.secondary{background:#201927}button:disabled{opacity:.45;cursor:not-allowed}input,select{width:100%;min-height:48px;background:#0e0b13;border:1px solid #594052;border-radius:10px;color:white;padding:12px}label{display:block;color:#e9dce9;font-size:.92rem;font-weight:700;margin:12px 0 6px}.hidden{display:none!important}.screen{width:min(1100px,100%);margin:0 auto;padding:22px 18px 40px;min-height:100vh;position:relative}.center-screen{display:flex;align-items:center;justify-content:center}.panel{background:linear-gradient(145deg,#1c1524f5,#100d16f7);border:1px solid #523044;border-radius:20px;padding:clamp(18px,4vw,32px);box-shadow:0 20px 65px #0008;position:relative;overflow:hidden}.panel:before{content:"";position:absolute;inset:0 0 auto;height:3px;background:linear-gradient(90deg,transparent,var(--red),var(--violet),transparent)}.narrow{width:min(590px,100%)}.eyebrow{letter-spacing:.15em;text-transform:uppercase;font-size:.76rem;font-weight:900;color:#ff8795}.logo{display:flex;align-items:center;gap:12px}.sigil{width:52px;height:52px;flex:none;display:grid;place-items:center;border:1px solid #b53c5d;border-radius:50%;background:radial-gradient(circle,#5b1734,#160d20);box-shadow:0 0 28px #df244044}.sigil svg{width:34px;height:34px}.title{font-size:clamp(2.3rem,8vw,5.5rem);line-height:.94;letter-spacing:-.055em;margin:18px 0 12px;font-weight:1000;text-shadow:0 5px 35px #e12b4c35}.title span{color:var(--red2)}.subtitle{color:var(--muted);line-height:1.6}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.spread{justify-content:space-between}.pill{display:inline-flex;align-items:center;gap:7px;border:1px solid #553448;border-radius:999px;padding:7px 11px;background:#150f1c;color:#e8d9e9;font-size:.82rem}.small{font-size:.88rem;color:var(--muted)}.muted{color:var(--muted)}.section-title{font-size:clamp(1.45rem,4vw,2rem);margin:0 0 10px}.rule{height:1px;background:#493043;margin:20px 0}.error{color:#ff8795;min-height:1.2em;font-size:.9rem}.landscape{position:relative;min-height:235px;border:1px solid #633147;border-radius:18px;overflow:hidden;background:linear-gradient(#1d0e25 0%,#35132c 52%,#100b15 100%);margin:18px 0}.moon{position:absolute;right:13%;top:20px;width:74px;height:74px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#ff7778,#a31335 65%,#4b0b29);box-shadow:0 0 40px #ff284855}.mist{position:absolute;left:-10%;right:-10%;height:55px;background:#a7a0b51c;filter:blur(12px);border-radius:50%;animation:drift 9s ease-in-out infinite alternate}.mist.one{top:52%}.mist.two{top:68%;animation-duration:12s}.castle{position:absolute;bottom:30px;left:15%;width:70%;height:100px;background:#100b17;clip-path:polygon(0 100%,0 45%,8% 45%,8% 20%,17% 20%,17% 48%,27% 48%,27% 0,38% 0,38% 48%,47% 48%,47% 28%,57% 28%,57% 48%,68% 48%,68% 10%,78% 10%,78% 45%,100% 45%,100% 100%)}.ground{position:absolute;bottom:0;height:34px;background:#08070d;width:100%}.tree{position:absolute;bottom:28px;width:5px;height:92px;background:#0c0910;transform:rotate(8deg)}.tree:before,.tree:after{content:"";position:absolute;background:#0c0910;width:4px;height:60px;top:12px;left:0;transform:rotate(42deg);transform-origin:top}.tree:after{transform:rotate(-45deg)}.tree.t1{left:8%}.tree.t2{right:8%;height:75px}.portal{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);width:66px;height:90px;border:4px solid #c52b50;border-radius:50% 50% 8px 8px;box-shadow:0 0 25px #d624534d,inset 0 0 18px #9b1c4b66;animation:pulse 2.5s infinite}.portal:after{content:"✦";position:absolute;inset:28px 0;text-align:center;color:#ff8da0;font-size:25px}.land-label{position:absolute;left:14px;bottom:9px;font-size:.74rem;letter-spacing:.12em;color:#d8b9ce;text-transform:uppercase}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:14px 0}.stat{border:1px solid #493043;background:#120e18;border-radius:12px;padding:12px}.stat strong{display:block;font-size:1.25rem}.stat span{font-size:.75rem;color:var(--muted)}.arena{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(230px,.8fr);gap:16px}.enemy-card{background:linear-gradient(160deg,#291322,#100d16);border:1px solid #693148;border-radius:16px;padding:18px;text-align:center}.enemy{font-size:4.2rem;filter:drop-shadow(0 0 15px #f03c5a44);animation:float 3s ease-in-out infinite}.health{height:9px;border-radius:99px;background:#342332;overflow:hidden;margin:9px 0}.health div{height:100%;background:linear-gradient(90deg,#c11f3b,#ff6c75);transition:width .3s}.question{font-size:clamp(1.12rem,3vw,1.45rem);font-weight:800;line-height:1.45;margin:15px 0}.answers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.answer{text-align:left;min-height:60px;display:flex;gap:10px;align-items:center}.answer .letter{display:grid;place-items:center;flex:none;width:29px;height:29px;border-radius:8px;background:#4b2039;color:#ffd6dd}.answer.correct{border-color:var(--green);background:#153327}.answer.wrong{border-color:#ff6679;background:#3b1523}.feedback{margin-top:14px;border-radius:12px;padding:13px;background:#110e18;border:1px solid #4b344a;line-height:1.5}.feedback.good{border-color:#3e8e6d}.feedback.bad{border-color:#a13c54}.timerline{height:5px;background:#3b2639;border-radius:99px;overflow:hidden}.timerline div{height:100%;background:linear-gradient(90deg,#d62c49,#eebc58);width:100%;transition:width .2s linear}.map-node{display:flex;align-items:center;gap:12px;width:100%;text-align:left;margin:9px 0;background:#18111e}.map-node .node-icon{font-size:1.6rem;width:40px;text-align:center}.map-node small{display:block;color:var(--muted);font-weight:500}.map-node.done{border-color:#398c6d}.map-node.active{border-color:var(--red2);box-shadow:0 0 18px #df244022}.map-node.locked{opacity:.48}.choice-card{padding:14px;border:1px solid #4d344b;border-radius:13px;background:#15101b;margin:10px 0}.choice-card button{width:100%;margin:5px 0;text-align:left}.choice-card button.selected{border-color:var(--gold);background:#392a1d}.bar{height:10px;background:#362434;border-radius:99px;overflow:hidden}.bar>div{height:100%;background:linear-gradient(90deg,#a82b57,#8044a7);width:0;transition:width .4s}.toast{position:fixed;z-index:10;bottom:15px;left:50%;transform:translateX(-50%);max-width:90vw;background:#211626;border:1px solid #9d3b58;padding:12px 16px;border-radius:12px;box-shadow:0 8px 30px #0009}.kbd{border:1px solid #76556b;border-radius:5px;padding:2px 6px;font-size:.8rem;color:#f9d7df}.footer{margin-top:24px;text-align:center;color:#8e7d92;font-size:.78rem;line-height:1.6}.grade-badge{font-size:1.7rem;font-weight:900;color:var(--gold)}.summary-list li{margin:8px 0;line-height:1.45}.sound-btn{min-width:46px}.shake{animation:shake .35s}.victory{animation:pulse 1.6s infinite}@keyframes pulse{50%{filter:brightness(1.3);box-shadow:0 0 34px #e32d5a66}}@keyframes float{50%{transform:translateY(-8px)}}@keyframes drift{to{transform:translateX(30px)}}@keyframes shake{25%,75%{transform:translateX(-4px)}50%{transform:translateX(4px)}}@media(max-width:760px){.grid,.arena{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.screen{padding:14px 12px 28px}.answers{grid-template-columns:1fr}.enemy-card{display:flex;align-items:center;gap:14px;text-align:left}.enemy{font-size:3.2rem}.enemy-card .enemy-info{flex:1;min-width:0}.title{font-size:clamp(2.6rem,15vw,4.5rem)}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<main>
+<!-- A. Registro obligatorio -->
+<section id="register" class="screen center-screen">
+ <div class="panel narrow">
+  <div class="logo"><div class="sigil" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none"><path d="M20 3 34 11v18L20 37 6 29V11L20 3Z" stroke="#ff637b" stroke-width="2"/><path d="m13 26 7-15 7 15m-11-5h8" stroke="#fff0f4" stroke-width="2.5" stroke-linecap="round"/></svg></div><div><div class="eyebrow">I. E. Fray Javier de Barcelona</div><div class="small">Acceso al Frayjabaverso</div></div></div>
+  <h1 class="title">SCHOOL <span>WARRIOR</span></h1>
+  <p class="subtitle">Antes de cruzar el portal, registra los datos de tu héroe. Esta información solo se conserva mientras la página esté abierta.</p>
+  <form id="registerForm" novalidate>
+   <label for="studentName">Nombre completo</label><input id="studentName" name="studentName" autocomplete="name" maxlength="80" required placeholder="Escribe tu nombre completo">
+   <label for="gameName">Nombre del videojuego</label><input id="gameName" name="gameName" required maxlength="50" value="SCHOOL WARRIOR">
+   <label for="studentGrade">Grado</label><select id="studentGrade" name="studentGrade" required><option value="">Selecciona tu grado</option><option>Cuarto</option><option>Quinto</option><option>Sexto</option><option>Séptimo</option></select>
+   <p id="registerError" class="error" role="alert"></p>
+   <button class="primary" type="submit" style="width:100%">Entrar al Frayjabaverso ↗</button>
+  </form>
+  <div class="footer">Proyecto creado por DIOGO HARLY GOMEZ NEGEDEKA Y GABRIEL FERNANDO ESTEDES TETEYE · Grado 11 ONCE</div>
+ </div>
+</section>
+
+<!-- B. Bienvenida -->
+<section id="welcome" class="screen hidden">
+ <div class="row spread"><div class="logo"><div class="sigil">✦</div><div><div class="eyebrow">Frayjabaverso · Expedición 01</div><div class="small">I. E. Fray Javier de Barcelona</div></div></div><button id="welcomeSound" class="sound-btn" aria-label="Activar o silenciar audio">♫ Audio</button></div>
+ <div class="grid" style="align-items:center;margin-top:22px">
+  <div><div class="eyebrow">El reino de las sombras te espera</div><h1 class="title">SCHOOL <span>WARRIOR</span></h1><p style="font-size:1.12rem;line-height:1.6">Entrena tu mente, derrota tus enemigos y conviértete en una leyenda.</p><p class="subtitle">La luz del reino se está apagando. Solo una mente curiosa podrá recuperarla.</p><div class="row"><span class="pill">⚔️ 5 batallas + jefe final</span><span class="pill">📚 7 materias</span><span class="pill">⏱️ 10 min aprox.</span></div></div>
+  <div class="landscape" role="img" aria-label="Castillo oscuro bajo una luna roja"><div class="moon"></div><div class="tree t1"></div><div class="tree t2"></div><div class="castle"></div><div class="portal"></div><div class="mist one"></div><div class="mist two"></div><div class="ground"></div><div class="land-label">Portal de las sombras · Frayjabaverso</div></div>
+ </div>
+ <div class="grid">
+  <div class="panel"><h2 class="section-title">📜 Tu misión</h2><p class="subtitle">Los guardianes de las ruinas han robado los cristales de luz. Supera cinco batallas de conocimiento y enfréntate al Maestro de las Sombras para devolver la luz al reino.</p><strong>Objetivo principal</strong><p class="small">Gana las cinco batallas y derrota al campeón final. Cada respuesta correcta fortalece tu energía y te da puntos.</p></div>
+  <div class="panel"><h2 class="section-title">🎮 Cómo jugar</h2><ul class="small" style="line-height:1.9;padding-left:20px"><li>Elige una misión en el mapa.</li><li>Responde antes de que se acabe el tiempo.</li><li>Usa los botones, el mouse o las teclas <span class="kbd">1</span> a <span class="kbd">4</span>.</li><li>Si fallas, lee la explicación y vuelve a intentarlo en el siguiente reto.</li><li>En el caso práctico, tus decisiones cambian los recursos de tu aventura.</li></ul></div>
+ </div>
+ <div class="panel" style="margin-top:16px"><div class="row spread"><div><div class="eyebrow">Héroe registrado</div><strong id="welcomeStudent">Estudiante</strong><div class="small" id="welcomeGrade"></div></div><button id="startGame" class="primary">Comenzar aventura ⚔️</button></div></div>
+ <div class="footer">Creado por DIOGO HARLY GOMEZ NEGEDEKA Y GABRIEL FERNANDO ESTEDES TETEYE · Grado 11 ONCE</div>
+</section>
+
+<!-- C. Mundo y mecánica -->
+<section id="world" class="screen hidden">
+ <header class="row spread"><div class="logo"><div class="sigil">✦</div><div><div class="eyebrow">Frayjabaverso</div><strong>Mapa del reino</strong><div class="small" id="worldPlayer"></div></div></div><button id="soundToggle" class="sound-btn" aria-label="Silenciar o activar audio">♫ Audio</button></header>
+ <div class="landscape"><div class="moon"></div><div class="tree t1"></div><div class="tree t2"></div><div class="castle"></div><div class="portal"></div><div class="mist one"></div><div class="mist two"></div><div class="ground"></div><div class="land-label">Las ruinas de Frayjabaverso</div></div>
+ <div class="stats"><div class="stat"><span>⚡ Puntos</span><strong id="statPoints">0</strong></div><div class="stat"><span>🪙 Monedas</span><strong id="statCoins">0</strong></div><div class="stat"><span>🏆 Victorias</span><strong id="statWins">0/6</strong></div><div class="stat"><span>💎 Cristales</span><strong id="statCrystals">0/5</strong></div></div>
+ <div class="row spread"><div><h2 class="section-title">Elige tu desafío</h2><p class="small">Cada guardián protege una parte de la luz. Supera los retos para abrir el portal final.</p></div><div class="pill" id="progressText">Progreso 0%</div></div><div class="bar"><div id="progressBar"></div></div>
+ <div class="arena" style="margin-top:16px">
+  <div class="panel"><div id="missionList"></div><div class="rule"></div><div class="row spread"><div><strong>🧭 Consejo del héroe</strong><div class="small">Lee cada explicación: también cuenta como entrenamiento.</div></div><button id="caseButton" class="secondary">Caso práctico 🔍</button></div></div>
+  <aside class="enemy-card"><div class="enemy">🧙🏽‍♂️</div><div class="enemy-info"><div class="eyebrow">Rival principal</div><h3 style="margin:5px 0">Maestro de las Sombras</h3><p class="small">Observa tus respuestas y se vuelve más fuerte. Guarda tu concentración para el duelo final.</p><div class="health"><div id="bossPreview" style="width:100%"></div></div><small class="muted">Poder del guardián final</small></div></aside>
+ </div>
+ <div class="footer">Usa las teclas 1, 2, 3 o 4 para responder. En móvil, toca las opciones. El audio empieza solo después de tu primera interacción.</div>
+</section>
+
+<!-- D. Misiones educativas -->
+<section id="battle" class="screen hidden">
+ <header class="row spread"><button id="backMap" class="secondary">← Mapa</button><div class="pill" id="battleTag">Misión 1</div><button id="battleSound" class="sound-btn">♫ Audio</button></header>
+ <div class="landscape" style="min-height:145px"><div class="moon" style="width:55px;height:55px"></div><div class="tree t1"></div><div class="tree t2"></div><div class="castle" style="height:65px"></div><div class="mist one"></div><div class="ground"></div><div class="land-label" id="battleScene">Bosque de las cifras</div></div>
+ <div class="arena"><div class="panel"><div class="row spread"><span class="pill" id="subjectPill">Matemáticas</span><span class="pill" id="questionCount">Reto 1 de 3</span></div><div class="row spread" style="margin-top:14px"><strong id="questionProgress">Cristal de conocimiento</strong><span id="timerText" class="small">20 s</span></div><div class="timerline"><div id="timerBar"></div></div><div id="questionText" class="question">Pregunta</div><div id="answers" class="answers"></div><div id="feedback" class="feedback hidden" role="status" aria-live="polite"></div><div class="row spread" style="margin-top:16px"><span class="small" id="hintText">Elige la respuesta correcta.</span><button id="nextQuestion" class="primary hidden">Continuar →</button></div></div>
+ <aside class="enemy-card"><div id="enemyEmoji" class="enemy">👹</div><div class="enemy-info"><div class="eyebrow" id="enemyLabel">Guardián</div><h3 id="enemyName" style="margin:5px 0">Centinela de piedra</h3><p class="small" id="enemyDesc">Responde para debilitarlo.</p><div class="health"><div id="enemyHealth" style="width:100%"></div></div><small class="muted" id="enemyHealthText">Energía 3/3</small><div class="rule"></div><div class="small">Puntos ganados por acierto: <strong id="pointsPotential">100</strong></div></div></aside></div>
+ <div class="footer">Una respuesta correcta te da puntos y monedas. El tiempo restante puede darte una bonificación.</div>
+</section>
+
+<!-- E. Caso práctico -->
+<section id="caseScreen" class="screen hidden">
+ <header class="row spread"><button id="caseBack" class="secondary">← Mapa</button><span class="pill">Misión especial · Vida real</span><button id="caseSound" class="sound-btn">♫ Audio</button></header>
+ <div class="panel" style="margin-top:20px"><div class="eyebrow">Expedición: la feria de la luz</div><h1 class="section-title" style="font-size:clamp(1.8rem,6vw,3rem)">Salva la feria del reino 🎪</h1><p class="subtitle">El pueblo prepara una feria para reconstruir el castillo. Tienes 120 monedas, 8 cristales de energía y 4 minutos de provisiones. Tus decisiones determinan si la feria sobrevive. Cada elección usa matemáticas, ciencias e inglés de la vida cotidiana.</p><div class="stats"><div class="stat"><span>🪙 Monedas</span><strong id="caseCoins">120</strong></div><div class="stat"><span>💎 Cristales</span><strong id="caseCrystals">8</strong></div><div class="stat"><span>⏳ Provisiones</span><strong id="caseSupplies">4</strong></div><div class="stat"><span>🤝 Confianza</span><strong id="caseTrust">0</strong></div></div><div id="caseContent"></div><div id="caseFeedback" class="feedback hidden" aria-live="polite"></div><div class="row spread" style="margin-top:16px"><span class="small" id="caseStepText">Decisión 1 de 4</span><button id="caseNext" class="primary hidden">Siguiente decisión →</button></div></div>
+</section>
+
+<!-- F. Pantalla de resultados -->
+<section id="results" class="screen hidden">
+ <div class="panel"><div class="row spread"><div class="logo"><div class="sigil">✦</div><div><div class="eyebrow">Frayjabaverso · Registro de leyenda</div><h1 class="section-title" style="margin:4px 0">Tu resultado final</h1></div></div><span class="grade-badge" id="resultGrade">1.0 / 5.0</span></div>
+ <div class="landscape"><div class="moon"></div><div class="tree t1"></div><div class="tree t2"></div><div class="castle"></div><div class="portal"></div><div class="mist one"></div><div class="ground"></div><div class="land-label">La luz que lograste recuperar</div></div>
+ <h2 id="resultStudent" class="section-title">Héroe</h2><p class="subtitle" id="resultGameGrade"></p><div class="stats"><div class="stat"><span>⚡ Puntaje</span><strong id="resultPoints">0</strong></div><div class="stat"><span>🏆 Retos superados</span><strong id="resultWins">0</strong></div><div class="stat"><span>✅ Correctas</span><strong id="resultCorrect">0</strong></div><div class="stat"><span>❌ Incorrectas</span><strong id="resultWrong">0</strong></div></div>
+ <div class="row spread"><div><div class="small">Nivel de desempeño</div><h2 id="performance" class="section-title">Bajo</h2></div><span class="pill" id="endingPill">Aventura completada</span></div><p id="gradeFormula" class="small"></p>
+ <div class="grid"><div class="choice-card"><h3>📚 Conceptos practicados</h3><ul id="learnedList" class="summary-list small"></ul></div><div class="choice-card"><h3>🧠 Recomendaciones</h3><ul id="recommendList" class="summary-list small"></ul></div></div>
+ <div class="rule"></div><div id="endingText" class="subtitle"></div><div class="row"><button id="playAgain" class="primary">Volver a jugar ↻</button><button id="resultsSound" class="secondary">♫ Audio</button></div><div class="footer">SCHOOL WARRIOR · I. E. Fray Javier de Barcelona · Proyecto de grado 11 ONCE</div></div>
+</section>
+<div id="toast" class="toast hidden" role="status"></div>
+</main>
+<script>
+"use strict";
+
+/* Datos de sesión: intencionalmente no se usa almacenamiento persistente. */
+const student = { name:"", game:"", grade:"" };
+const state = {
+ points:0, coins:0, wins:0, crystals:0, correct:0, wrong:0, answered:0,
+ missionWins:[false,false,false,false,false,false], missionAttempts:[0,0,0,0,0,0],
+ concepts:new Set(), wrongConcepts:new Set(), caseDone:false, caseStep:0,
+ caseStats:{coins:120,crystals:8,supplies:4,trust:0}, caseChoices:[], caseScore:0,
+ currentMission:0, qIndex:0, currentQuestions:[], qAnswered:false, battleFinished:false, timer:20,
+ timerId:null, audioOn:true, audioCtx:null, musicTimer:null, musicStep:0, runStarted:false
+};
+
+const missions = [
+ {name:"Bosque de las cifras",subject:"Matemáticas",enemy:"Centinela de piedra",emoji:"🗿",desc:"Calcula con calma y rompe su armadura.",questions:[
+  q("En la tienda, una libreta cuesta 3 monedas. ¿Cuánto cuestan 4 libretas?",["7 monedas","12 monedas","9 monedas","14 monedas"],1,"Multiplicación cotidiana","3 × 4 = 12. Cuatro libretas de 3 monedas cuestan 12 monedas.",20),
+  q("Tienes 24 cristales y repartes la misma cantidad entre 6 cofres. ¿Cuántos van en cada cofre?",["3","4","6","8"],1,"División","24 ÷ 6 = 4. Repartir en partes iguales es dividir.",22),
+  q("Una capa cuesta 15 monedas y pagas con 20. ¿Cuánto cambio recibes?",["3","4","5","6"],2,"Resta y dinero","20 − 15 = 5. El cambio es lo que sobra después de pagar.",24)]},
+ {name:"Pantano de las medidas",subject:"Física",enemy:"Bestia del pantano",emoji:"🐊",desc:"Usa las unidades correctas para cruzar.",questions:[
+  q("Una antorcha ilumina 2 metros. ¿Cuántos metros iluminan 3 antorchas iguales, sin superponer sus luces?",["5 m","6 m","8 m","9 m"],1,"Medición y multiplicación","2 × 3 = 6 metros, si las zonas iluminadas no se superponen.",22),
+  q("Un carrito recorre 12 metros en 4 segundos. ¿Cuál es su rapidez promedio?",["2 m/s","3 m/s","4 m/s","8 m/s"],1,"Rapidez","Rapidez = distancia ÷ tiempo = 12 ÷ 4 = 3 m/s.",24),
+  q("¿Qué fuerza hace que una piedra caiga al suelo?",["Magnetismo siempre","Gravedad","Electricidad estática","Luz"],1,"Gravedad","La gravedad atrae los objetos hacia la Tierra.",26)]},
+ {name:"Laboratorio carmesí",subject:"Química",enemy:"Alquimista oscuro",emoji:"🧪",desc:"Identifica la materia antes de mezclar.",questions:[
+  q("¿Cuál de estos es un cambio físico al preparar una bebida?",["Quemar azúcar","Derretir hielo","Oxidar hierro","Cocinar un huevo"],1,"Cambios físicos y químicos","Derretir hielo cambia su estado, pero sigue siendo agua: es un cambio físico.",24),
+  q("¿Cuál es una mezcla homogénea?",["Agua con sal bien disuelta","Agua y aceite separados","Arena con piedras","Cereal con leche"],0,"Mezclas","En agua salada bien mezclada no se distinguen sus componentes a simple vista.",26),
+  q("¿Qué debes hacer antes de usar un producto de limpieza desconocido?",["Olerlo de cerca","Mezclarlo con otro","Leer la etiqueta y pedir ayuda adulta","Probar una gota"],2,"Seguridad química","Leer la etiqueta y seguir indicaciones de un adulto evita mezclas peligrosas.",28)]},
+ {name:"Jardín de las raíces",subject:"Biología",enemy:"Raíz devoradora",emoji:"🌿",desc:"Descubre cómo vive el reino natural.",questions:[
+  q("¿Qué necesitan principalmente las plantas para realizar la fotosíntesis?",["Luz, agua y dióxido de carbono","Solo arena","Solo oxígeno","Oscuridad completa"],0,"Fotosíntesis","Las plantas usan luz, agua y dióxido de carbono para producir azúcares y liberar oxígeno.",24),
+  q("¿Qué órgano bombea la sangre por el cuerpo humano?",["Pulmón","Estómago","Corazón","Riñón"],2,"Sistema circulatorio","El corazón impulsa la sangre a través de los vasos sanguíneos.",26),
+  q("En una cadena alimentaria, ¿qué papel suele cumplir el pasto?",["Consumidor","Productor","Descomponedor","Depredador"],1,"Ecosistemas","El pasto produce su alimento mediante fotosíntesis, por eso es productor.",28)]},
+ {name:"Torre de las palabras",subject:"Inglés",enemy:"Cuervo de tinta",emoji:"🐦‍⬛",desc:"Descifra los mensajes para abrir la puerta.",questions:[
+  q("En inglés, ¿qué significa “How much is it?”",["¿Dónde está?","¿Cuánto cuesta?","¿Qué hora es?","¿Cómo te llamas?"],1,"Inglés cotidiano","“How much is it?” se usa para preguntar el precio de algo.",24),
+  q("Completa: “I ___ water every day.”",["drink","drinks","drinking","drank"],0,"Presente simple","Con “I” se usa “drink”: I drink water every day.",26),
+  q("Un letrero dice “Keep out”. ¿Qué significa?",["Bienvenidos","Siga derecho","No entrar","Agua potable"],2,"Instrucciones en inglés","“Keep out” significa no entrar o mantenerse fuera.",28)]},
+ {name:"Ruinas del saber",subject:"Español y sociales",enemy:"Espectro del olvido",emoji:"💀",desc:"Une las palabras con la memoria del pueblo.",questions:[
+  q("¿Cuál oración tiene un uso correcto de la mayúscula?",["el lunes fui a Cali.","El lunes fui a Cali.","El Lunes fui a cali.","el Lunes fui a cali."],1,"Ortografía","La primera palabra de una oración lleva mayúscula y los nombres propios, como Cali, también.",26),
+  q("¿Cuál es un ejemplo de fuente histórica primaria?",["Una novela actual sobre la Colonia","Una carta escrita durante la época estudiada","Un resumen escolar reciente","Un video de ficción"],1,"Fuentes históricas","Una carta original de la época es una fuente primaria porque procede del periodo estudiado.",28),
+  q("¿Para qué sirven principalmente las normas de convivencia?",["Para evitar todo diálogo","Para organizar la vida común y resolver conflictos","Para que nadie participe","Para castigar siempre"],1,"Convivencia ciudadana","Las normas ayudan a proteger derechos, coordinar acciones y resolver desacuerdos.",30)]}
+];
+
+function q(text, options, answer, concept, explanation, seconds){return {text,options,answer,concept,explanation,seconds};}
+const $ = id => document.getElementById(id);
+const screens = ["register","welcome","world","battle","caseScreen","results"];
+function showScreen(id){screens.forEach(s=>$(s).classList.toggle("hidden",s!==id));window.scrollTo({top:0,behavior:"smooth"});}
+function toast(message){const t=$("toast");t.textContent=message;t.classList.remove("hidden");clearTimeout(toast.timeout);toast.timeout=setTimeout(()=>t.classList.add("hidden"),2500);}
+function safeText(el,text){el.textContent=String(text);}
+function clamp(n,min,max){return Math.max(min,Math.min(max,n));}
+function escapeHTML(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+
+/* Audio sintetizado, generado localmente con Web Audio API. */
+function initAudio(){
+ if(!state.audioOn)return;
+ try{
+  const AC=window.AudioContext||window.webkitAudioContext;if(!AC)return;
+  if(!state.audioCtx)state.audioCtx=new AC();
+  if(state.audioCtx.state==="suspended")state.audioCtx.resume();
+  if(!state.musicTimer){state.musicStep=0;state.musicTimer=setInterval(playAmbient,1250);}
+  updateSoundButtons();
+ }catch(e){state.audioOn=false;updateSoundButtons();}
+}
+function tone(freq,duration=.12,type="sine",volume=.035,delay=0){
+ if(!state.audioOn||!state.audioCtx)return;
+ try{const c=state.audioCtx,o=c.createOscillator(),g=c.createGain(),now=c.currentTime+delay;o.type=type;o.frequency.setValueAtTime(freq,now);g.gain.setValueAtTime(.0001,now);g.gain.exponentialRampToValueAtTime(Math.max(.0002,volume),now+.02);g.gain.exponentialRampToValueAtTime(.0001,now+duration);o.connect(g);g.connect(c.destination);o.start(now);o.stop(now+duration+.03);}catch(e){}
+}
+function playAmbient(){
+ if(!state.audioOn||!state.audioCtx)return;
+ const notes=[55,65.4,73.4,65.4,49,58.3,69.3,58.3];const n=notes[state.musicStep++%notes.length];
+ tone(n,.65,"triangle",.012);if(state.musicStep%4===0)tone(n*2,.24,"sine",.008,.05);
+}
+function sfx(kind){if(!state.audioOn)return;const patterns={correct:[[660,.12],[880,.16]],wrong:[[180,.2],[135,.22]],reward:[[523,.12],[659,.12],[784,.24]],event:[[110,.35],[165,.3],[220,.4]],click:[[350,.06]]};(patterns[kind]||patterns.click).forEach((v,i)=>tone(v[0],v[1],kind==="wrong"?"sawtooth":"triangle",.035,i*.09));}
+function updateSoundButtons(){["welcomeSound","soundToggle","battleSound","caseSound","resultsSound"].forEach(id=>{const b=$(id);if(b){b.textContent=state.audioOn?"♫ Audio: ON":"♫ Audio: OFF";b.setAttribute("aria-pressed",String(state.audioOn));}});}
+function toggleAudio(){state.audioOn=!state.audioOn;if(state.audioOn)initAudio();else{if(state.musicTimer){clearInterval(state.musicTimer);state.musicTimer=null;}}updateSoundButtons();if(state.audioOn)sfx("event");}
+["welcomeSound","soundToggle","battleSound","caseSound","resultsSound"].forEach(id=>$(id).addEventListener("click",toggleAudio));
+
+/* Registro: no se permite continuar con campos vacíos. */
+$("registerForm").addEventListener("submit",e=>{
+ e.preventDefault();
+ const name=$("studentName").value.trim(),game=$("gameName").value.trim(),grade=$("studentGrade").value;
+ if(name.length<3||!name.includes(" ")){safeText($("registerError"),"Escribe tu nombre y al menos un apellido.");$("studentName").focus();return;}
+ if(!game){safeText($("registerError"),"Escribe el nombre del videojuego.");$("gameName").focus();return;}
+ if(!grade){safeText($("registerError"),"Selecciona tu grado para continuar.");$("studentGrade").focus();return;}
+ Object.assign(student,{name,game,grade});safeText($("registerError"),"");initAudio();sfx("event");
+ safeText($("welcomeStudent"),student.name);safeText($("welcomeGrade"),"Grado "+student.grade+" · Héroe del reino");
+ showScreen("welcome");
+});
+$("startGame").addEventListener("click",()=>{initAudio();sfx("event");state.runStarted=true;safeText($("worldPlayer"),student.name+" · Grado "+student.grade);renderMap();showScreen("world");});
+
+/* Mapa y desbloqueo de misiones. */
+function isUnlocked(i){if(i===0)return true;return state.missionWins[i-1]===true;}
+function renderMap(){
+ const list=$("missionList");list.innerHTML="";
+ missions.forEach((m,i)=>{
+  const done=state.missionWins[i],unlocked=isUnlocked(i);
+  const b=document.createElement("button");b.className="map-node"+(done?" done":unlocked?" active":" locked");b.disabled=!unlocked;
+  b.innerHTML='<span class="node-icon">'+(done?"🏆":unlocked?m.emoji:"🔒")+'</span><span><strong>'+escapeHTML("Batalla "+(i+1)+": "+m.name)+'</strong><small>'+escapeHTML(m.subject)+" · "+(done?"Cristal recuperado":unlocked?"Disponible":"Supera la batalla anterior")+"</small></span>";
+  b.addEventListener("click",()=>startMission(i));list.appendChild(b);
+ });
+ const finalUnlocked=state.missionWins.every(Boolean);
+ const final=document.createElement("button");final.className="map-node"+(finalUnlocked?" active":" locked");final.disabled=!finalUnlocked;
+ final.innerHTML='<span class="node-icon">'+(state.missionWins[5]?"👑":"🧙🏽‍♂️")+'</span><span><strong>Duelo final: Maestro de las Sombras</strong><small>'+(state.missionWins[5]?"Campeón derrotado":finalUnlocked?"Portal abierto":"Recupera los cinco cristales y completa las ruinas")+"</small></span>";
+ final.addEventListener("click",()=>startFinal());list.appendChild(final);
+ $("statPoints").textContent=state.points;$("statCoins").textContent=state.coins;$("statWins").textContent=state.wins+"/7";$("statCrystals").textContent=state.crystals+"/5";
+ const completed=state.missionWins.filter(Boolean).length;const pct=Math.round((completed+(state.caseDone?.5:0))/6*100);$("progressBar").style.width=pct+"%";safeText($("progressText"),"Progreso "+pct+"%");
+ $("bossPreview").style.width=(state.missionWins[5]?0:100)+"%";
+ if(state.missionWins.every(Boolean)&&state.caseDone&&!state.finalPlayed){/* el jefe final sigue disponible en el mapa */}
+}
+function startMission(i){
+ if(!isUnlocked(i))return;
+ initAudio();sfx("event");state.currentMission=i;state.currentQuestions=missions[i].questions;state.qIndex=0;state.finalBattle=false;state.missionAttempts[i]++;
+ setupBattle();showScreen("battle");loadQuestion();
+}
+function startFinal(){
+ if(!state.missionWins.every(Boolean))return;
+ initAudio();sfx("event");state.currentMission=6;state.finalBattle=true;state.qIndex=0;state.missionAttempts[6]=(state.missionAttempts[6]||0)+1;
+ state.currentQuestions=[
+ q("El Maestro tiene 48 puntos de energía. Un cristal le quita la cuarta parte. ¿Cuántos puntos pierde?",["8","10","12","16"],2,"Fracciones y división","La cuarta parte de 48 es 48 ÷ 4 = 12.",28),
+ q("El portal usa 3 focos de 6 vatios durante 2 horas. ¿Cuánta energía consumen en total?",["12 Wh","18 Wh","24 Wh","36 Wh"],3,"Energía eléctrica","Potencia total: 3 × 6 = 18 W. En 2 horas: 18 × 2 = 36 Wh.",30),
+ q("El guardián dice: “Think before you act”. ¿Qué significa?",["Corre sin mirar","Piensa antes de actuar","Abre la puerta","Apaga la luz"],1,"Comprensión en inglés","“Think before you act” significa “Piensa antes de actuar”.",30),
+ q("Un pueblo tiene 80 habitantes y el 25 % ayuda a reconstruir. ¿Cuántos ayudan?",["15","20","25","40"],1,"Porcentajes","25 % es la cuarta parte: 80 ÷ 4 = 20 personas.",32)
+ ];
+ setupBattle();showScreen("battle");loadQuestion();
+}
+function setupBattle(){
+ state.battleFinished=false;
+ const final=state.finalBattle,m=final?{name:"Portal de la luna roja",subject:"Desafío final",enemy:"Maestro de las Sombras",emoji:"🧙🏽‍♂️",desc:"Demuestra todo lo que aprendiste."}:missions[state.currentMission];
+ safeText($("battleTag"),final?"Duelo final":"Batalla "+(state.currentMission+1));safeText($("battleScene"),m.name);safeText($("subjectPill"),m.subject);safeText($("enemyEmoji"),m.emoji);safeText($("enemyName"),m.enemy);safeText($("enemyLabel"),final?"Campeón final":"Guardián");safeText($("enemyDesc"),m.desc);
+ $("enemyHealth").style.width="100%";$("feedback").classList.add("hidden");$("nextQuestion").classList.add("hidden");
+}
+function loadQuestion(){
+ clearInterval(state.timerId);state.qAnswered=false;
+ const qn=state.currentQuestions[state.qIndex];if(!qn){finishBattle();return;}
+ safeText($("questionCount"),"Reto "+(state.qIndex+1)+" de "+state.currentQuestions.length);safeText($("questionProgress"),"Cristal de conocimiento");safeText($("questionText"),qn.text);safeText($("timerText"),qn.seconds+" s");safeText($("hintText"),"Elige una respuesta. Teclas 1 a 4 también funcionan.");
+ $("timerBar").style.width="100%";$("feedback").classList.add("hidden");$("nextQuestion").classList.add("hidden");$("pointsPotential").textContent=100+(state.finalBattle?20:0);
+ const answers=$("answers");answers.innerHTML="";
+ qn.options.forEach((opt,i)=>{const b=document.createElement("button");b.className="answer";b.innerHTML='<span class="letter">'+(i+1)+'</span><span>'+escapeHTML(opt)+'</span>';b.addEventListener("click",()=>answerQuestion(i,b));answers.appendChild(b);});
+ state.timer=qn.seconds;const total=qn.seconds;
+ state.timerId=setInterval(()=>{if(state.qAnswered){clearInterval(state.timerId);return;}state.timer=Math.max(0,state.timer-.2);$("timerBar").style.width=(state.timer/total*100)+"%";safeText($("timerText"),Math.ceil(state.timer)+" s");if(state.timer<=0)answerQuestion(-1,null,true);},200);
+}
+function answerQuestion(index,button,timeout=false){
+ if(state.qAnswered)return;state.qAnswered=true;clearInterval(state.timerId);const qn=state.currentQuestions[state.qIndex],buttons=[...$("answers").querySelectorAll("button")];buttons.forEach((b,i)=>{b.disabled=true;if(i===qn.answer)b.classList.add("correct");});
+ state.answered++;state.concepts.add(qn.concept);
+ const correct=index===qn.answer;
+ if(correct){state.correct++;const base=state.finalBattle?150:100;const bonus=Math.round(state.timer*2);state.points+=base+bonus;state.coins+=5;sfx("correct");$("feedback").className="feedback good";$("feedback").textContent="¡Correcto! "+qn.explanation+" Ganaste "+(base+bonus)+" puntos y 5 monedas.";}
+ else{state.wrong++;state.wrongConcepts.add(qn.concept);if(button)button.classList.add("wrong");sfx("wrong");$("feedback").className="feedback bad";$("feedback").textContent=(timeout?"Se acabó el tiempo. ":"No era esa opción. ")+qn.explanation+" Puedes aprenderlo e intentarlo de nuevo en la próxima partida.";}
+ $("feedback").classList.remove("hidden");safeText($("hintText"),correct?"¡Buen trabajo, héroe!":"La explicación te ayuda a mejorar.");const remaining=state.currentQuestions.length-state.qIndex-1;
+ $("nextQuestion").textContent=remaining>0?"Siguiente reto →": "Ver resultado de batalla →";$("nextQuestion").classList.remove("hidden");
+ const health=Math.max(0,100-((state.qIndex+1)/state.currentQuestions.length*100));$("enemyHealth").style.width=health+"%";safeText($("enemyHealthText"),"Retos restantes: "+remaining);
+ updateMapStats();
+}
+$("nextQuestion").addEventListener("click",()=>{if(!state.qAnswered||state.battleFinished)return;state.qIndex++;loadQuestion();});
+function finishBattle(){
+ if(state.battleFinished)return;state.battleFinished=true;
+ clearInterval(state.timerId);const i=state.currentMission;
+ const total=state.currentQuestions.length,correctThis=state.currentQuestions.reduce((n,q,idx)=>n+(idx<total?0:0),0); // el resultado real se calcula con el registro de respuestas de la batalla
+ const result=state.battleCorrect||0;
+ const battleAnswered=state.battleAnswered||0;
+ // Se guardan contadores por batalla al comenzar y se comparan al finalizar.
+ const startCorrect=state.battleStartCorrect??state.correct,startWrong=state.battleStartWrong??state.wrong;
+ const right=state.correct-startCorrect,wrong=state.wrong-startWrong;
+ const won=right>=Math.ceil(total*.5);
+ if(won&&!state.missionWins[i]){
+  state.missionWins[i]=true;state.wins++;if(i<6)state.crystals=Math.min(5,state.crystals+1);state.points+=75;state.coins+=10;sfx("reward");toast("¡Victoria! +75 puntos, +10 monedas y un emblema.");
+ }else if(!won){toast("El guardián resiste. Puedes volver a intentarlo desde el mapa.");}
+ if(i===6){state.finalPlayed=true;if(won){state.finalWon=true;state.wins++;state.points+=150;state.coins+=20;sfx("reward");}else{state.finalWon=false;}}
+ updateMapStats();
+ $("feedback").classList.remove("hidden");$("feedback").className="feedback "+(won?"good":"bad");$("feedback").textContent=won?(i===6?"¡El Maestro de las Sombras ha sido derrotado! La luz vuelve al reino.":"¡Batalla superada! El guardián te entrega su cristal de luz."):"Aún necesitas al menos la mitad de respuestas correctas. Vuelve al mapa y entrena otra vez.";
+ $("answers").innerHTML="";$("questionText").textContent=won?"¡Victoria de conocimiento!":"El guardián sigue en pie";$("questionCount").textContent="Resultado de batalla";$("timerBar").style.width="0%";$("timerText").textContent="Fin";$("nextQuestion").textContent=won&&i===6?"Ver resultados finales →":won?"Volver al mapa →":"Reintentar batalla ↻";$("nextQuestion").classList.remove("hidden");
+ $("nextQuestion").onclick=()=>{
+  $("nextQuestion").onclick=null;
+  if(i===6&&won){showResults();return;}
+  if(!won){startMission(i);return;}
+  if(state.missionWins.every(Boolean)&&state.finalWon){showResults();return;}
+  renderMap();showScreen("world");
+ };
+}
+function updateMapStats(){ $("statPoints").textContent=state.points;$("statCoins").textContent=state.coins;$("statWins").textContent=state.wins+"/7";$("statCrystals").textContent=state.crystals+"/5"; }
+$("backMap").addEventListener("click",()=>{clearInterval(state.timerId);renderMap();showScreen("world");});
+
+/* E. Caso práctico con decisiones encadenadas y consecuencias reales en recursos. */
+const caseData=[
+ {title:"1. Compra los materiales",text:"Necesitas 3 lámparas para iluminar el puesto. Cada una cuesta 12 monedas. ¿Qué plan eliges?",concept:"Multiplicación y presupuesto",options:[
+  {text:"Comprar 3 lámparas por 36 monedas",cost:36,crystals:0,supplies:0,trust:1,score:1,feedback:"Correcto: 3 × 12 = 36 monedas. Te alcanza el presupuesto y el puesto queda bien iluminado."},
+  {text:"Comprar 3 lámparas por 30 monedas",cost:30,crystals:0,supplies:0,trust:-1,score:0,feedback:"El cálculo no coincide: 3 × 12 = 36. El vendedor no puede entregar las tres por 30 monedas."},
+  {text:"Comprar 4 lámparas por 48 monedas",cost:48,crystals:0,supplies:-1,trust:0,score:.5,feedback:"4 × 12 = 48, pero una lámpara extra reduce las provisiones disponibles. Planear la cantidad evita desperdicios."}]},
+ {title:"2. Enciende el generador",text:"El generador necesita 2 cristales por hora. Debe funcionar durante 3 horas. ¿Qué opción es más segura y suficiente?",concept:"Multiplicación y energía",options:[
+  {text:"Usar 6 cristales y apagarlo al terminar",cost:0,crystals:-6,supplies:0,trust:1,score:1,feedback:"2 × 3 = 6 cristales. El generador cubre las tres horas y se apaga para no desperdiciar energía."},
+  {text:"Usar 5 cristales durante 3 horas",cost:0,crystals:-5,supplies:0,trust:-1,score:0,feedback:"Se necesitan 2 × 3 = 6 cristales. Con 5, falta energía para completar la última hora."},
+  {text:"Usar 8 cristales sin controlar el tiempo",cost:0,crystals:-8,supplies:0,trust:0,score:.5,feedback:"Hay energía suficiente, pero no controlar el tiempo desperdicia recursos. Un plan medido es más eficiente."}]},
+ {title:"3. Lee la señal de seguridad",text:"Aparece un aviso junto al generador: “Do not touch wet wires”. ¿Qué haces?",concept:"Inglés y seguridad eléctrica",options:[
+  {text:"Tocar el cable para comprobarlo",cost:0,crystals:0,supplies:-1,trust:-2,score:0,feedback:"No es seguro. La frase significa “No toques cables mojados”. Aléjate y avisa a una persona adulta responsable."},
+  {text:"Alejar a todos y avisar a un adulto",cost:0,crystals:0,supplies:0,trust:2,score:1,feedback:"Muy bien: entendiste la advertencia y priorizaste la seguridad. Nunca manipules cables mojados."},
+  {text:"Echar más agua para enfriarlo",cost:0,crystals:0,supplies:-1,trust:-2,score:0,feedback:"El agua aumenta el peligro eléctrico. La traducción es “No toques cables mojados”; hay que alejarse y avisar."}]},
+ {title:"4. Cuida el jardín del pueblo",text:"Para recuperar el jardín, las plantas necesitan agua, luz y dióxido de carbono. Solo tienes agua limitada. ¿Qué plan ayuda a las plantas sin desperdiciar?",concept:"Fotosíntesis y uso responsable del agua",options:[
+  {text:"Regar lo necesario por la mañana y dejar que reciban luz",cost:0,crystals:0,supplies:-1,trust:2,score:1,feedback:"Correcto: las plantas usan luz, agua y dióxido de carbono en la fotosíntesis. Regar sin exceso cuida el recurso."},
+  {text:"Dejar las plantas en oscuridad y no regarlas",cost:0,crystals:0,supplies:0,trust:-1,score:0,feedback:"Sin luz y agua suficiente, las plantas no pueden crecer adecuadamente. La fotosíntesis necesita luz."},
+  {text:"Regarlas todo el día aunque el suelo esté empapado",cost:0,crystals:0,supplies:-2,trust:0,score:.5,feedback:"El exceso de agua desperdicia recursos y puede dañar las raíces. Es mejor regar según la necesidad de la planta."}]}
+];
+function startCase(){
+ initAudio();$("caseNext").onclick=null;state.caseStep=0;state.caseDone=false;state.caseChoices=[];state.caseScore=0;state.caseStats={coins:120,crystals:8,supplies:4,trust:0};
+ renderCase();showScreen("caseScreen");sfx("event");
+}
+$("caseButton").addEventListener("click",startCase);
+$("caseBack").addEventListener("click",()=>{renderMap();showScreen("world");});
+function renderCase(){
+ const st=state.caseStats;["coins","crystals","supplies","trust"].forEach(k=>safeText($("case"+k[0].toUpperCase()+k.slice(1)),st[k]));
+ const c=caseData[state.caseStep],wrap=$("caseContent");wrap.innerHTML="";
+ if(!c){finishCase();return;}
+ const h=document.createElement("h2");h.className="section-title";h.textContent=c.title;wrap.appendChild(h);
+ const p=document.createElement("p");p.className="subtitle";p.textContent=c.text;wrap.appendChild(p);
+ c.options.forEach((op,i)=>{const b=document.createElement("button");b.className="answer";b.style.width="100%";b.style.margin="5px 0";b.textContent=(i+1)+". "+op.text;b.addEventListener("click",()=>chooseCase(i));wrap.appendChild(b);});
+ $("caseFeedback").classList.add("hidden");$("caseNext").classList.add("hidden");safeText($("caseStepText"),"Decisión "+(state.caseStep+1)+" de 4");
+}
+function chooseCase(i){
+ if(state.caseChoices[state.caseStep]!==undefined)return;
+ const c=caseData[state.caseStep],op=c.options[i],st=state.caseStats;
+ state.caseChoices[state.caseStep]=i;state.caseScore+=op.score;state.concepts.add(c.concept);if(op.score===0)state.wrongConcepts.add(c.concept);else state.correct++;
+ st.coins=clamp(st.coins-op.cost,0,999);st.crystals=clamp(st.crystals+op.crystals,0,99);st.supplies=clamp(st.supplies+op.supplies,0,99);st.trust=clamp(st.trust+op.trust,-10,20);
+ state.points+=Math.round(op.score*60);if(op.score===1){state.coins+=3;sfx("correct");}else sfx("wrong");
+ [...$("caseContent").querySelectorAll("button")].forEach((b,j)=>{b.disabled=true;if(j===i)b.classList.add("selected");});
+ $("caseFeedback").className="feedback "+(op.score===1?"good":op.score===0?"bad":"");$("caseFeedback").textContent=op.feedback;$("caseFeedback").classList.remove("hidden");$("caseNext").classList.remove("hidden");$("caseNext").textContent=state.caseStep===3?"Cerrar expedición →":"Siguiente decisión →";
+ renderCaseStatsOnly();
+}
+function renderCaseStatsOnly(){const st=state.caseStats;["coins","crystals","supplies","trust"].forEach(k=>safeText($("case"+k[0].toUpperCase()+k.slice(1)),st[k]));}
+$("caseNext").addEventListener("click",()=>{
+ if(state.caseChoices[state.caseStep]===undefined)return;
+ if(state.caseStep<3){state.caseStep++;renderCase();}else finishCase();
+});
+function finishCase(){
+ state.caseDone=true;
+ const c=$("caseContent");c.innerHTML="<h2 class='section-title'>¡La feria está a salvo! 🎉</h2><p class='subtitle'>Terminaste las cuatro decisiones. Tus recursos finales muestran el efecto de tus elecciones. Regresa al mapa para continuar las batallas.</p><p class='small'>Decisiones acertadas: "+state.caseScore+" de 4. Confianza del pueblo: "+state.caseStats.trust+".</p>";
+ $("caseFeedback").classList.add("hidden");$("caseNext").classList.remove("hidden");$("caseNext").textContent="Volver al mapa";$("caseNext").onclick=()=>{state.caseNextHandler=true;renderMap();showScreen("world");$("caseNext").onclick=null;};
+ $("caseStepText").textContent="Expedición completada";state.points+=Math.round(state.caseScore*25);state.coins+=Math.max(0,state.caseStats.trust)*2;updateMapStats();renderCaseStatsOnly();
+}
+
+/* Evaluación basada en el rendimiento medido durante la partida. */
+function showResults(){
+ clearInterval(state.timerId);if(state.musicTimer){clearInterval(state.musicTimer);state.musicTimer=null;}
+ const scoreRatio=state.answered?state.correct/state.answered:0;
+ const caseRatio=state.caseChoices.length?state.caseScore/4:0;
+ const missionRatio=state.missionWins.filter(Boolean).length/7;
+ // 70 % precisión de respuestas, 20 % misiones y 10 % caso práctico.
+ const raw=(scoreRatio*.7+missionRatio*.2+caseRatio*.1);
+ const grade=Math.round((1+4*raw)*10)/10;
+ const performance=grade<3?"Bajo":grade<4?"Básico":grade<4.6?"Alto":"Superior";
+ safeText($("resultStudent"),student.name);safeText($("resultGameGrade"),student.game+" · Grado "+student.grade);
+ safeText($("resultPoints"),state.points);safeText($("resultWins"),state.missionWins.filter(Boolean).length+(state.finalWon?1:0));safeText($("resultCorrect"),state.correct);safeText($("resultWrong"),state.wrong);
+ safeText($("resultGrade"),grade.toFixed(1)+" / 5.0");safeText($("performance"),performance);
+ safeText($("gradeFormula"),"Fórmula: 1,0 + 4 × [70 % precisión ("+(scoreRatio*100).toFixed(0)+" %) + 20 % misiones ("+(missionRatio*100).toFixed(0)+" %) + 10 % caso práctico ("+(caseRatio*100).toFixed(0)+" %)]. Resultado redondeado a un decimal. La nota depende de tus acciones reales.");
+ safeText($("endingPill"),state.finalWon?"Campeón del Frayjabaverso":state.missionWins.filter(Boolean).length>=5?"Guardián de la luz":"Entrenamiento completado");
+ const learned=$("learnedList");learned.innerHTML="";[...state.concepts].forEach(con=>{const li=document.createElement("li");li.textContent=con;learned.appendChild(li);});if(!state.concepts.size){const li=document.createElement("li");li.textContent="Aún no se registran conceptos practicados.";learned.appendChild(li);}
+ const rec=$("recommendList");rec.innerHTML="";
+ const recs=[];if(state.wrongConcepts.size)recs.push("Repasa: "+[...state.wrongConcepts].join(", ")+".");if(scoreRatio<.7)recs.push("Lee las explicaciones y vuelve a jugar para mejorar la precisión.");if(missionRatio<1)recs.push("Practica las batallas pendientes para fortalecer las materias.");if(caseRatio<.75)recs.push("Antes de decidir, calcula los recursos y piensa en la seguridad.");if(!recs.length)recs.push("¡Buen trabajo! Sigue practicando y explica a otra persona cómo resolviste los retos.");
+ recs.forEach(t=>{const li=document.createElement("li");li.textContent=t;rec.appendChild(li);});
+ safeText($("endingText"),state.finalWon?"¡Has recuperado la luz del reino y derrotado al Maestro de las Sombras! La inteligencia, la calma y la cooperación salvaron el Frayjabaverso.": "La aventura termina por ahora, pero el entrenamiento continúa. Cada error te muestra qué puedes practicar. Regresa al mapa y sigue fortaleciendo tus conocimientos.");
+ sfx("reward");showScreen("results");
+}
+$("playAgain").addEventListener("click",()=>{
+ clearInterval(state.timerId);if(state.musicTimer){clearInterval(state.musicTimer);state.musicTimer=null;}
+ const keep={...student};Object.keys(state).forEach(k=>{if(state[k] instanceof Set)state[k]=new Set();});
+ Object.assign(state,{points:0,coins:0,wins:0,crystals:0,correct:0,wrong:0,answered:0,missionWins:[false,false,false,false,false,false],missionAttempts:[],caseDone:false,caseStep:0,caseStats:{coins:120,crystals:8,supplies:4,trust:0},caseChoices:[],caseScore:0,currentMission:0,qIndex:0,currentQuestions:[],qAnswered:false,timer:20,finalPlayed:false,finalWon:false,runStarted:true,battleStartCorrect:0,battleStartWrong:0});
+ Object.assign(student,keep);renderMap();showScreen("world");initAudio();
+});
+
+/* Guardar el inicio de contadores en cada batalla para calcular sus resultados. */
+const originalStartMission=startMission;
+startMission=function(i){state.battleStartCorrect=state.correct;state.battleStartWrong=state.wrong;originalStartMission(i);};
+const originalStartFinal=startFinal;
+startFinal=function(){state.battleStartCorrect=state.correct;state.battleStartWrong=state.wrong;originalStartFinal();};
+
+/* Atajos de teclado accesibles, sin interferir con campos de formulario. */
+document.addEventListener("keydown",e=>{
+ if(e.altKey||e.ctrlKey||e.metaKey)return;
+ const tag=(e.target&&e.target.tagName||"").toLowerCase();if(["input","select","textarea"].includes(tag))return;
+ if(!$("battle").classList.contains("hidden")&&!state.qAnswered&&["1","2","3","4"].includes(e.key)){
+  const btn=$("answers").querySelectorAll("button")[Number(e.key)-1];if(btn&&!btn.disabled)btn.click();
+ }else if(e.key==="Escape"){
+  if(!$("battle").classList.contains("hidden"))$("backMap").click();
+  else if(!$("caseScreen").classList.contains("hidden"))$("caseBack").click();
+ }
+});
+/* Evita el zoom accidental por doble toque en navegadores móviles, sin bloquear el desplazamiento normal. */
+let lastTouchEnd=0;document.addEventListener("touchend",e=>{const now=Date.now();if(now-lastTouchEnd<=280)e.preventDefault();lastTouchEnd=now;},{passive:false});
+/* El juego no fuerza el giro de pantalla: se adapta a orientación vertical u horizontal. */
+updateSoundButtons();
+</script>
+</body>
+</html>
